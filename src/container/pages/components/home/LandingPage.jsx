@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './Navbar';
 
 
 
@@ -7,7 +8,7 @@ import React from 'react'
 const LandingPage= ()=> {
     return (
         <div>
-            <h1>Hello</h1>
+            <Navbar />
         </div>
     )
 }
