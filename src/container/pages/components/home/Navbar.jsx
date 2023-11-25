@@ -1,12 +1,26 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 
 import '../../styles/home/Navbar.css';
 
  const Navbar = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  
 
     
   return (
-    <header className='header'>
+    <header className={`header ${isSticky ? 'sticty' : ''}`}>
      <a href='#' className='logo'>SamTech.</a>
      <nav className='navbar'>
         <a href='#home' className='active'>Home</a>
