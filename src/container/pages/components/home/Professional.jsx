@@ -1,13 +1,27 @@
-import React from 'react'
+import React from 'react';
+import '../../styles/home/Professional.css';
 
-const Professional=()=> {
+
+const Professional = ()=> {
   return (
     <div className='profession-container'>
         <div className='profession-box'>
             <div className='profession'>
-                <i className=''></i>
+                <i className='bx bx-code-alt'></i>
                 <h3>Software Engineer</h3>
             </div>
+            <div class="profession">
+                    <i class='bx bxl-java'></i>
+                    <h3>Backend Engineer</h3>
+                </div>
+                <div class="profession">
+                    <i class='bx bxl-react'></i>
+                    <h3>Front-end Engineer</h3>
+                </div>
+                <div class="profession">
+                    <i class='bx bxl-figma' ></i>
+                    <h3>System Design</h3>
+                </div>
 
         </div>
     </div>

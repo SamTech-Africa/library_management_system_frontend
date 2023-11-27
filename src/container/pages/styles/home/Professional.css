@@ -1,0 +1,26 @@
+.profession-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 768px;
+    height: 768px;
+    background: red;
+    pointer-events: none;
+}
+
+.profession {
+    --i: 0;
+}
+
+.profession:nth-child(2) {
+    --i: 1;
+}
+
+.profession:nth-child(3) {
+    --i: 2;
+}
+
+.profession:nth-child(4) {
+    --i: 3;
+}
