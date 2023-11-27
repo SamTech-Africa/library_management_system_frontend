@@ -14,7 +14,7 @@
 :root {
   --bg-color: #fdfdfd;
   --text-color: #333;
-  --main-color: #754ef9;
+  --main-color: #442a1b;
   --white-color: #fdfdfd;
   --shadow-color: rgba(0, 0, 0, .2);
   --transition-delay: .5s ease;
@@ -52,4 +52,9 @@ body {
 
 span {
   color: var(--main-color);
+}
+
+.heading {
+  font-size: 4.5rem;
+  text-align: center;
 }

@@ -1,6 +1,6 @@
 
 .dark-icon {
-    --bg-color: #0b061f;
+    --bg-color: #9c7335;
     --text-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .7);
 }
@@ -11,7 +11,8 @@
     left: 0;
     width: 100%;
     padding: 2rem 7%;
-    background: yellowgreen;
+    /* background: yellowgreen; */
+    background: transparent;
     display: flex;
     align-items: center;
     z-index: 100;
@@ -35,7 +36,7 @@
     position: relative;
     font-size: 1.7rem;
     color: var(--white-color);
-    font-weight: 500;
+    font-weight: 900;
     margin-right: 3.5rem;
 }
 

@@ -25,7 +25,7 @@ const Home =()=> {
         </div>
         <Professional />
         <div className='home-img'>
-          <img src={LibrayShelfImg} alt='Library Shelf'></img>
+          <img src={LibrayShelfImg} alt='Library Shelf' />
         </div>
 
     </div>
