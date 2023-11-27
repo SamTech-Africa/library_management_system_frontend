@@ -43,3 +43,14 @@
     background: var(--main-color);
     color: var(--white-color);
 }
+
+.home-img img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* width: 40%; */
+    pointer-events: none;
+    height: 700px;
+    width: 460px;
+   
+}

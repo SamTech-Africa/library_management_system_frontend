@@ -1,8 +1,11 @@
 import React from 'react'
 import '../../styles/home/Home.css';
 import Professional from './Professional';
+import LibrayShelfImg from '../../../../assets/image/jpg/library-shelf.jpg';
+
 
 const Home =()=> {
+
   return (
     <div className='home' id='home'>
         <div className='home-content'>
@@ -22,7 +25,7 @@ const Home =()=> {
         </div>
         <Professional />
         <div className='home-img'>
-          
+          <img src={LibrayShelfImg} alt='Library Shelf'></img>
         </div>
 
     </div>

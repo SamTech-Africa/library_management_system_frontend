@@ -49,3 +49,7 @@ body {
   color: var(--main-color);
   border-color: var(--main-color);
 }
+
+span {
+  color: var(--main-color);
+}
