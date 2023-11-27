@@ -23,7 +23,9 @@ const Professional = ()=> {
                     <h3>System Design</h3>
                 </div>
 
+                <div className='circle'></div>
         </div>
+        <div className='overlay'></div>
     </div>
   )
 }

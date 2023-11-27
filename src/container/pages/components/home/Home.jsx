@@ -21,6 +21,9 @@ const Home =()=> {
             <a href='#'><i className='btn'>Get Started</i></a>
         </div>
         <Professional />
+        <div className='home-img'>
+          
+        </div>
 
     </div>
   )
