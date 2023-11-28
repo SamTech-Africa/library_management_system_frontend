@@ -14,15 +14,66 @@ const Books = () => {
     <div className='books' id='books'>
         <h2 className='heading'>Latest <span>Books</span></h2>
         <div className='books-container'>
-        <div className='books-box'>
-            <img src={Book1Img} alt='Java' />
-            <h4>Pro Java Programming</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
-                    esse!
-            </p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-           
+            <div className='books-box'>
+                <img src={Book1Img} alt='Java' />
+                <div className='books-layer'>
+                    <h4>Pro Java Programming</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
+                        esse!
+                    </p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div className='books-box'>
+                <img src={Book2Img} alt='Java' />
+                <div className='books-layer'>
+                    <h4>Java Programming</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
+                        esse!
+                    </p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div className='books-box'>
+                <img src={Book3Img} alt='Java' />
+                <div className='books-layer'>
+                    <h4>Java Dietel</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
+                        esse!
+                    </p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div className='books-box'>
+                <img src={Book4Img} alt='Java' />
+                <div className='books-layer'>
+                    <h4>Python Programming</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
+                        esse!
+                    </p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div className='books-box'>
+                <img src={Book5Img} alt='Java' />
+                <div className='books-layer'>
+                    <h4>The Definition Guide to Django</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
+                        esse!
+                    </p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div className='books-box'>
+                <img src={Book6Img} alt='Java' />
+                <div className='books-layer'>
+                    <h4>Spring Boot in Action</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
+                        esse!
+                    </p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
         </div>
     </div>
   )

@@ -1,0 +1,77 @@
+.books {
+    padding-bottom: 10rem;
+}
+
+.books h2{
+    margin-bottom: 4rem;
+}
+
+.books .books-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.books-container .books-box {
+    position: relative;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.books-box img {
+    width: 100%;
+    transition: var(--transition-delay);
+}
+
+.books-box:hover img {
+    transform: scale(1.1);
+}
+
+.books-box .books-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    opacity: 0;
+    transition: var(--transition-delay);
+}
+
+.books-box:hover .books-layer {
+    opacity: 1;
+}
+
+.books-layer h4{
+    font-size: 3rem;
+}
+
+.books-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.books-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--white-color);
+    border-radius: 50%;
+}
+
+.books-layer a i {
+    font-size: 2rem;
+    color: #333;
+}
