@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Home from '../home/Home';
 import About from './About';
 import Services from './Services';
+import Books from './Books';
 
 
 
@@ -21,6 +22,9 @@ const LandingPage= ()=> {
             </section>
             <section>
                 <Services />
+            </section>
+            <section>
+                <Books />
             </section>
         </div>
     )
