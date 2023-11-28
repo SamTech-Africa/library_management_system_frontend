@@ -70,3 +70,8 @@
     color: var(--white-color);
     cursor: pointer;
 }
+
+.header.sticky #darkMode-icon {
+    color: var(--text-color);
+    opacity: .9;
+}

@@ -12,12 +12,14 @@ import '../../styles/home/Navbar.css';
     const handleScroll = () => {
       setIsSticky(window.scrollY > 100);
     };
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
 
   const handleDarkModeToggle = () => {
     setDarkMode(!darkMode);
@@ -28,9 +30,9 @@ import '../../styles/home/Navbar.css';
 
     
   return (
-    <header className={`header ${isSticky ? 'sticty' : ''}`}>
+    <header className={`header ${isSticky ? 'sticky' : ''}`}>
      <a href='#' className='logo'>SamTech.</a>
-     <nav className='navbar'>
+     <nav className={`navbar ${isSticky ? 'sticky' : ''}`}>
         <a href='#home' className='active'>Home</a>
         <a href='#about'>About</a>
         <a href='#services'>Services</a>
