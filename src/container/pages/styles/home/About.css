@@ -10,6 +10,10 @@
     margin: 70px 70px 0 100px;
 }
 
+.about-content {
+    margin-top: 6rem;
+}
+
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
