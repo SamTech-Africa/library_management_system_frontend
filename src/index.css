@@ -17,6 +17,7 @@
   --main-color: #442a1b;
   --white-color: #fdfdfd;
   --shadow-color: rgba(0, 0, 0, .2);
+  --book-color: #754ef9;
   --transition-delay: .5s ease;
 }
 
@@ -57,5 +58,5 @@ span {
 .heading {
   font-size: 4.5rem;
   text-align: center;
-  
+
 }
