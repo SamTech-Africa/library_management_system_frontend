@@ -7,6 +7,7 @@ import Services from './Services';
 import Books from './Books';
 import Testimonial from './Testimonial';
 import Contact from './Contact';
+import Footer from './Footer';
 
 
 
@@ -34,6 +35,7 @@ const LandingPage= ()=> {
             <section>
                 <Contact />
             </section>
+            <Footer />
         </div>
     )
 }
