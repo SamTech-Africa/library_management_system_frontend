@@ -30,3 +30,21 @@
     border-top: .8rem solid var(--main-color);
     border-bottom: .8rem solid var(--main-color);
 }
+
+.testimonial-slide img {
+    width: 14rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+ 
+.testimonial-slide h3 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+.testimonial-slide p {
+    font-size: 1.4rem;
+    text-align: center;
+}
