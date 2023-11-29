@@ -6,6 +6,7 @@ import About from './About';
 import Services from './Services';
 import Books from './Books';
 import Testimonial from './Testimonial';
+import Contact from './Contact';
 
 
 
@@ -29,6 +30,9 @@ const LandingPage= ()=> {
             </section>
             <section>
                 <Testimonial />
+            </section>
+            <section>
+                <Contact />
             </section>
         </div>
     )
