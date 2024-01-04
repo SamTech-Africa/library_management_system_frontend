@@ -5,7 +5,7 @@
   "dependencies": {
     "boxicons": "^2.1.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
     "react-scripts": "0.9.5",
     "swiper": "^11.0.5"
   },
@@ -14,5 +14,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.23.3"
   }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import '../../styles/home/Home.css';
 import Professional from './Professional';
 import LibrayShelfImg from '../../../../assets/image/jpg/library-shelf.jpg';
+import { Link } from 'react-router-dom';
 
 
 const Home =()=> {
@@ -22,6 +23,7 @@ const Home =()=> {
                 <a href="#"><i class="bx bxl-linkedin" ></i></a>
             </div>
             <a href='#'><i className='btn'>Get Started</i></a>
+            <Link to="/login">Get Started</Link>
         </div>
         <Professional />
         <div className='home-img'>
