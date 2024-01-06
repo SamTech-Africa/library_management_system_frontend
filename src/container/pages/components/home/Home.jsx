@@ -21,8 +21,9 @@ const Home =()=> {
                 <a href="#"><i class="bx bxl-twitter" ></i></a>
                 <a href="#"><i class="bx bxl-instagram-alt" ></i></a>
                 <a href="#"><i class="bx bxl-linkedin" ></i></a>
+                
             </div>
-            <a href='#'><i className='btn'>Get Started</i></a>
+            {/* <a href='#'><i className='btn'>Get Started</i></a> */}
             <Link to="/login">Get Started</Link>
         </div>
         <Professional />
