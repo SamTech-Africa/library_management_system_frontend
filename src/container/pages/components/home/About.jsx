@@ -1,6 +1,8 @@
 import React from 'react';
 import AboutImg from '../../../../assets/image/jpeg/about.jpeg';
 import '../../styles/home/About.css';
+import { Link } from 'react-router-dom';
+
 const About = () => {
   return (
     <div className='about' id='about'>
@@ -15,7 +17,7 @@ const About = () => {
                 accusamus temporibus quasi? Inventore excepturi est provident laborum deleniti rem rerum nihil quibusdam at debitis.
             </p>
 
-            <a href="#" class="btn">Read More</a>
+            <Link to="/#" className="btn">Read More</Link>
         </div>
 
     </div>
