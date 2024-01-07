@@ -6,6 +6,7 @@ import Book3Img from '../../../../assets/image/jpeg/book-3.jpeg'
 import Book4Img from '../../../../assets/image/jpeg/book-4.jpeg'
 import Book5Img from '../../../../assets/image/jpeg/book-5.jpeg'
 import Book6Img from '../../../../assets/image/jpeg/book-6.jpeg'
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,7 +22,7 @@ const Books = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
                         esse!
                     </p>
-                    <Link href="#"><i class="bx bx-link-external"></i></a>
+                    <Link to="#"><i class="bx bx-link-external"></i></Link>
                 </div>
             </div>
             <div className='books-box'>
@@ -31,7 +32,7 @@ const Books = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
                         esse!
                     </p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
+                    <Link to="#"><i class="bx bx-link-external"></i></Link>
                 </div>
             </div>
             <div className='books-box'>
@@ -41,7 +42,7 @@ const Books = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
                         esse!
                     </p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
+                    <Link to="#"><i class="bx bx-link-external"></i></Link>
                 </div>
             </div>
             <div className='books-box'>
@@ -51,7 +52,7 @@ const Books = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
                         esse!
                     </p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
+                    <Link to="#"><i class="bx bx-link-external"></i></Link>
                 </div>
             </div>
             <div className='books-box'>
@@ -61,7 +62,7 @@ const Books = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
                         esse!
                     </p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
+                    <Link to="#"><i class="bx bx-link-external"></i></Link>
                 </div>
             </div>
             <div className='books-box'>
@@ -71,7 +72,7 @@ const Books = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
                         esse!
                     </p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
+                    <Link to="#"><i class="bx bx-link-external"></i></Link>
                 </div>
             </div>
         </div>
