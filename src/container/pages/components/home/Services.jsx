@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/home/Services.css'
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   return (
@@ -13,7 +14,7 @@ const Services = () => {
                    mollitia, debitis dolorum illo non accusantium, natus nemo rerum facere
                    maiores? Eum!
                 </p>
-                <a href='#' className='btn'>Read More</a>
+                <Link to='#' className='btn'>Read More</Link>
             </div>
             <div class="services-box">
                 <i class='bx bxl-java'></i>
@@ -21,7 +22,7 @@ const Services = () => {
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta possimus
                    mollitia, debitis dolorum illo non accusantium, natus nemo rerum facere
                    maiores? Eum!</p>
-                <a href="#" class="btn">Read More</a>
+                <Link to="/#" className="btn">Read More</Link>
             </div>
             <div class="services-box">
                 <i class='bx bxl-react'></i>
@@ -29,7 +30,7 @@ const Services = () => {
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta possimus
                    mollitia, debitis dolorum illo non accusantium, natus nemo rerum facere
                    maiores? Eum!</p>
-                <a href="#" class="btn">Read More</a>
+                <Link to="/#" className="btn">Read More</Link>
             </div>
             <div class="services-box">
                 <i class='bx bxl-figma' ></i>
@@ -37,7 +38,7 @@ const Services = () => {
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta possimus
                    mollitia, debitis dolorum illo non accusantium, natus nemo rerum facere
                    maiores? Eum!</p>
-                <a href="#" class="btn">Read More</a>
+                <Link  to="/#" class="btn">Read More</Link>
             </div>
         </div>
 

@@ -21,7 +21,7 @@ const Books = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore
                         esse!
                     </p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
+                    <Link href="#"><i class="bx bx-link-external"></i></a>
                 </div>
             </div>
             <div className='books-box'>
