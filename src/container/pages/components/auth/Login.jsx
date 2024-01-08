@@ -8,8 +8,9 @@ const Login = () => {
   return (
     <div>
       <header className={styles.header}>
-      <Link to='/#' className='logo'>SamTech.</Link>
+      <Link to='/#' className={styles.logo}>SamTech.</Link>
         <nav className={styles.navbar}>
+            <Link to='/' className='active'>Home</Link>
             <Link to='/register'>Register</Link>
         </nav>
       </header>
@@ -27,6 +28,15 @@ const Login = () => {
             </div>
             <div class={styles.inputBox}>
                 <input type="password" placeholder="Enter your password" />
+            </div>
+            <div className={styles.others}>
+              <div className={styles.rememberMe}>
+                  <input type="checkbox" id="rememberMe" />
+                  <label htmlFor="rememberMe">Remember me</label>
+              </div>
+              <div className={styles.forgotPassword}>
+                <a href="/forgot-password">Forgot Password?</a>
+              </div>
             </div>
             <input type="submit" value="Login" className={styles.btn}/>
         </form>

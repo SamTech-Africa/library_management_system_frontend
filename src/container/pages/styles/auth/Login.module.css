@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     padding: 2rem 7%;
-    background: #b4724c;;
+    background: var(--main-color);
     display: flex;
     align-items: center;
     z-index: 100;
@@ -14,7 +14,7 @@
 
 .logo {
     font-size: 2.5rem;
-    color: var(--main-color);
+    color: var(--white-color);
     font-weight: 700;
     cursor: default;
     margin-right: auto;
@@ -53,6 +53,7 @@
 
 .formSection form .inputBox input {
     width: 100%;
+    max-width: 400px;
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
@@ -62,12 +63,17 @@
     box-shadow: 0 .1rem .5rem var(--shadow-color);
 }
 
+.others {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .btn {
     display: inline-block;
     width: 100%;
     padding: 1.2rem 2.8rem;
-    background: #b4724c;
+    background: var(--main-color);
     border-radius: .6rem;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 1.6rem;
