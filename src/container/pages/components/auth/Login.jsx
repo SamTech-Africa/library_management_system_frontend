@@ -10,7 +10,7 @@ const Login = () => {
       <header className={styles.header}>
       <Link to='/#' className='logo'>SamTech.</Link>
         <nav className={styles.navbar}>
-            <Link to='/' className='active'>Home</Link>
+            <Link to='/register'>Register</Link>
         </nav>
       </header>
 
