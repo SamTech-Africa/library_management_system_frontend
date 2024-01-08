@@ -28,6 +28,10 @@
   
 }
 
+.navbar a:first-child {
+    margin-right: 3.5rem;
+}
+
 .formSection {
     display: flex;
     flex-direction: column;
