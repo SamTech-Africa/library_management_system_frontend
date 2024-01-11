@@ -1,9 +1,29 @@
 import React,{useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import styles from '../../styles/auth/register.module.css';
 
 const Register  = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name] : event.target.value });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault(); 
+
+    try {
+      const response = await axios.post()
+    }
+  };
+
     
   return (
     <div>
@@ -31,7 +51,7 @@ const Register  = () => {
             </div>
 
             <div class={styles.inputBox}>
-                <input type="emai" placeholder="Enter your email" />
+                <input type="email" placeholder="Enter your email" />
             </div>
             <div class={styles.inputBox}>
                 <input type="password" placeholder="Enter your password" />
