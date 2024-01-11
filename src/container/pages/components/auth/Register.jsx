@@ -19,10 +19,17 @@ const Register  = () => {
       <section className={styles.formSection}>
 
         
-        <h2 class="heading">Welcome <span>Back!</span></h2>
-        <p>Login to your Account</p>
+        <h2 class="heading">Welcome </h2>
+        <p>Sign up by entering the information below</p>
 
         <form className={styles.formInput} action="#">
+            <div class={styles.inputBox}>
+                <input type="text" placeholder="Enter your email" />
+            </div>
+            <div class={styles.inputBox}>
+                <input type="password" placeholder="Enter your password" />
+            </div>
+
             <div class={styles.inputBox}>
                 <input type="text" placeholder="Enter your email" />
             </div>
