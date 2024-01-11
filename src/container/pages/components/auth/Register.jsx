@@ -24,14 +24,14 @@ const Register  = () => {
 
         <form className={styles.formInput} action="#">
             <div class={styles.inputBox}>
-                <input type="text" placeholder="Enter your email" />
+                <input type="text" placeholder="First Name" />
             </div>
             <div class={styles.inputBox}>
-                <input type="password" placeholder="Enter your password" />
+                <input type="text" placeholder="Last Name" />
             </div>
 
             <div class={styles.inputBox}>
-                <input type="text" placeholder="Enter your email" />
+                <input type="emai" placeholder="Enter your email" />
             </div>
             <div class={styles.inputBox}>
                 <input type="password" placeholder="Enter your password" />
