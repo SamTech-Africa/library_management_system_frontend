@@ -25,7 +25,7 @@ const Login = () => {
     };
     
     try {
-      const response = await axios.get('http://localhost:5252/api/v1/auth/login', data);
+      const response = await axios.post('http://localhost:5252/api/v1/auth/login', data);
       
       console.log('Login successfu:', response.data);
     } catch (error) {
