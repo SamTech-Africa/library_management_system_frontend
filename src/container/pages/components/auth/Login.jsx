@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import styles from '../../styles/auth/Login.module.css';
@@ -28,6 +28,7 @@ const Login = () => {
       const response = await axios.post('http://localhost:5252/api/v1/auth/login', data);
       
       console.log('Login successfu:', response.data);
+      useNavigate("/dashboard");
     } catch (error) {
       console.error('Error during login', error);
     };
