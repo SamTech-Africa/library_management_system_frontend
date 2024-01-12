@@ -7,6 +7,7 @@ import styles from '../../styles/auth/Login.module.css';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -28,7 +29,7 @@ const Login = () => {
       const response = await axios.post('http://localhost:5252/api/v1/auth/login', data);
       
       console.log('Login successfu:', response.data);
-      useNavigate("/dashboard");
+      navigate("/dashboard");
     } catch (error) {
       console.error('Error during login', error);
     };
