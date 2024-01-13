@@ -41,27 +41,20 @@ const Login = () => {
       <div className={styles.leftSection}></div>
       <div className={styles.rightSection}>
       <div className={styles.topSection}>
-        <h5>
+        <h3>
           <Link to="/">
             <i class='bx bxs-chevron-left'></i> Return Home
           </Link>
-        </h5>
-        <h5>
+        </h3>
+        <h3>
             Not a member yet?{" "}
             <Link to="/register">
               <span>Register NOW</span>
             </Link>
-        </h5>
+        </h3>
 
       </div>
-      </div>
-
-
-
-      {/* <section className={styles.formSection}>
-
-        
-        <h2 class="heading">Welcome <span>Back!</span></h2>
+       <section className={styles.formSection}>
         <p>Login to your Account</p>
 
         <form className={styles.formInput} onSubmit={handleSubmit}>
@@ -93,7 +86,8 @@ const Login = () => {
         
         
 
-      </section> */}
+      </section>
+      </div>
     </div>
    
     
