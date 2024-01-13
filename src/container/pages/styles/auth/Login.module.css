@@ -1,3 +1,18 @@
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: inherit !important;
+}
+
+.leftSection {
+    background-image: url("../../../../assets/image/svg/login.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: auto;
+}
+
 
 .header {
     position: fixed;

@@ -37,14 +37,21 @@ const Login = () => {
 
     
   return (
-    <div>
-      <header className={styles.header}>
+    <div className={styles.container}>
+      {/* <header className={styles.header}>
       <Link to='/#' className={styles.logo}>SamTech.</Link>
         <nav className={styles.navbar}>
             <Link to='/' className='active'>Home</Link>
             <Link to='/register'>Register</Link>
         </nav>
-      </header>
+      </header> */}
+      <div className={styles.leftSection}></div>
+      <div className={styles.leftSection}>
+      <div className={styles.leftSection}>
+
+      </div>
+      </div>
+
 
 
       <section className={styles.formSection}>
