@@ -43,7 +43,7 @@ const Login = () => {
       <div className={styles.topSection}>
         <h5>
           <Link to="/">
-            <i class='bx bxs-chevron-left'></i>
+            <i class='bx bxs-chevron-left'></i> Return Home
           </Link>
         </h5>
         <h5>
