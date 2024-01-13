@@ -38,23 +38,27 @@ const Login = () => {
     
   return (
     <div className={styles.container}>
-      {/* <header className={styles.header}>
-      <Link to='/#' className={styles.logo}>SamTech.</Link>
-        <nav className={styles.navbar}>
-            <Link to='/' className='active'>Home</Link>
-            <Link to='/register'>Register</Link>
-        </nav>
-      </header> */}
       <div className={styles.leftSection}></div>
-      <div className={styles.leftSection}>
-      <div className={styles.leftSection}>
+      <div className={styles.rightSection}>
+      <div className={styles.topSection}>
+        <h5>
+          <Link to="/">
+            <i class='bx bxs-chevron-left'></i>
+          </Link>
+        </h5>
+        <h5>
+            Not a member yet?{" "}
+            <Link to="/register">
+              <span>Register NOW</span>
+            </Link>
+        </h5>
 
       </div>
       </div>
 
 
 
-      <section className={styles.formSection}>
+      {/* <section className={styles.formSection}>
 
         
         <h2 class="heading">Welcome <span>Back!</span></h2>
@@ -89,7 +93,7 @@ const Login = () => {
         
         
 
-      </section>
+      </section> */}
     </div>
    
     

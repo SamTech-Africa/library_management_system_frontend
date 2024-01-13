@@ -1,16 +1,16 @@
 .container {
     width: 100%;
     display: grid;
-    grid-template-columns: 40% 60%;
-    height: inherit !important;
+    grid-template-columns: 35% 65%;
+    height: 100vh;
 }
 
 .leftSection {
     background-image: url("../../../../assets/image/svg/login.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
 
