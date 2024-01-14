@@ -54,7 +54,7 @@ const Login = () => {
         </h3>
 
       </div>
-       <section className={styles.formSection}>
+       <div className={styles.formSection}>
         <p>Login to your Account</p>
 
         <form className={styles.formInput} onSubmit={handleSubmit}>
@@ -86,7 +86,7 @@ const Login = () => {
         
         
 
-      </section>
+      </div>
       </div>
     </div>
    
