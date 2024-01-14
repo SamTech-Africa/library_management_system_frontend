@@ -72,10 +72,12 @@
 .others {
     display: flex;
     justify-content: space-between;
+    font-weight: 700;
 }
 
 .others .rememberMe  label{
     margin-left: .5rem;
+    color: var(--main-color);
 }
 
 
@@ -98,4 +100,8 @@
     background: transparent;
     color: var(--main-color);
     border-color: var(--main-color);
+  }
+
+  a {
+    color: var(--main-color);
   }
