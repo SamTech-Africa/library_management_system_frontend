@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -29,59 +29,67 @@ const Register  = () => {
 
     
   return (
-    <div>
-      <header className={styles.header}>
-      <Link to='/#' className={styles.logo}>SamTech.</Link>
-        <nav className={styles.navbar}>
-            <Link to='/' className='active'>Home</Link>
-            <Link to='/login'>Login</Link>
-        </nav>
-      </header>
-
-
-      <section className={styles.formSection}>
+    <div className={styles.container}>
+      <div className={styles.leftSection}></div>
+      <div className={styles.rightSection}>
+        <div className={styles.topSection}>
+        <h3>
+          <Link to="/">
+            <i class='bx bxs-chevron-left'></i>  <span>Return Home</span>
+          </Link>
+        </h3>
+        <h3>
+            Already a member?{" "}
+            <Link to="/login">
+              <span> Login Now!</span>
+            </Link>
+        </h3>
+        </div>
+        <div className={styles.formSection}>
 
         
-        <h2 class="heading">Welcome </h2>
-        <p>Sign up by entering the information below</p>
+<h2 class="heading">Welcome </h2>
+<p>Sign up by entering the information below</p>
 
-        <form className={styles.formInput} onSubmit={handleSubmit}>
-            <div class={styles.inputBox}>
-                <input 
-                  type="text"
-                  placeholder="First Name"
-                  name='firstName'
-                  onChange={handleChange} />
-            </div>
-            <div class={styles.inputBox}>
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  name='lastName'
-                  onChange={handleChange} />
-            </div>
+<form className={styles.formInput} onSubmit={handleSubmit}>
+    <div class={styles.inputBox}>
+        <input 
+          type="text"
+          placeholder="First Name"
+          name='firstName'
+          onChange={handleChange} />
+    </div>
+    <div class={styles.inputBox}>
+        <input
+          type="text"
+          placeholder="Last Name"
+          name='lastName'
+          onChange={handleChange} />
+    </div>
 
-            <div class={styles.inputBox}>
-                <input
-                 type="email"
-                 placeholder="Enter your email"
-                 name='email'
-                 onChange={handleChange} />
-            </div>
-            <div class={styles.inputBox}>
-                <input
-                 type="password"
-                  placeholder="Enter your password"
-                  name='password'
-                  onChange={handleChange} />
-            </div>
-            
-            <input type="submit" value="Register" className={styles.btn}/>
-        </form>
-        
-        
+    <div class={styles.inputBox}>
+        <input
+         type="email"
+         placeholder="Enter your email"
+         name='email'
+         onChange={handleChange} />
+    </div>
+    <div class={styles.inputBox}>
+        <input
+         type="password"
+          placeholder="Enter your password"
+          name='password'
+          onChange={handleChange} />
+    </div>
+    
+    <input type="submit" value="Register" className={styles.btn}/>
+</form>
 
-      </section>
+
+
+</div>
+      </div>
+    
     </div>
    
     
