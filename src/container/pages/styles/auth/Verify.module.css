@@ -1,3 +1,48 @@
-.container {
-    
+.leftSection {
+    background-image: url("../../../../assets/image/svg/verify.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+    width: 100%;
 }
+
+
+
+
+
+.formSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50rem; 
+    margin-top: 5rem;
+}
+
+
+
+.formSection p {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.formSection form {
+    max-width: 90rem;
+    margin: 1rem auto;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.formSection form .formIput input {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #1c1464;
+    font-size: 40px;
+    margin: 0 15px 25px;
+    border: 2px solid #0f0c29;
+    border-radius: 10px;
+}
+

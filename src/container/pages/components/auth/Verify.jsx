@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import styles from '../../styles/auth/Verify.module.css'
 import PinInput from 'react-pin-input';
+
+import styles from '../../styles/auth/Auth.module.css';
+import style from '../../styles/auth/Verify.module.css';
+
+
 
 const Verify = () => {
     const navigate = useNavigate();
@@ -50,7 +54,7 @@ const Verify = () => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.leftSection}></div>
+            <div className={style.leftSection}></div>
             <div className={styles.rightSection}>
                 <div className={styles.topSection}>
                     <h3>
@@ -59,11 +63,11 @@ const Verify = () => {
                         </Link>
                     </h3>
                 </div>
-                <div className={styles.formSection}>
+                <div className={style.formSection}>
                     <p>
                         Kindly Check your mail to see your OTP number for Account verification
                     </p>
-                    <form className={styles.formInput} onSubmit={handleTokenSubmit}>
+                    <form className={style.formInput} onSubmit={handleTokenSubmit}>
                         <PinInput 
                             length={5}
                             secret
