@@ -2,7 +2,8 @@ import React,{useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-import styles from '../../styles/auth/Login.module.css';
+import styles from '../../styles/auth/Auth.module.css';
+import style from '../../styles/auth/Login.module.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -38,7 +39,7 @@ const Login = () => {
     
   return (
     <div className={styles.container}>
-      <div className={styles.leftSection}></div>
+      <div className={style.leftSection}></div>
       <div className={styles.rightSection}>
       <div className={styles.topSection}>
         <h3>
@@ -72,12 +73,12 @@ const Login = () => {
                  value={password}
                  onChange={handleChangePassword} />
             </div>
-            <div className={styles.others}>
-              <div className={styles.rememberMe}>
+            <div className={style.others}>
+              <div className={style.rememberMe}>
                   <input type="checkbox" id="rememberMe" />
                   <label htmlFor="rememberMe">Remember me</label>
               </div>
-              <div className={styles.forgotPassword}>
+              <div className={style.forgotPassword}>
                 <a href="/forgot-password">Forgot Password?</a>
               </div>
             </div>

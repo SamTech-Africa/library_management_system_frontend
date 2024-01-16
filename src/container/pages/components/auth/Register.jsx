@@ -2,8 +2,8 @@ import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import styles from '../../styles/auth/register.module.css';
-
+import styles from '../../styles/auth/Auth.module.css';
+import style from '../../styles/auth/register.module.css';
 const Register  = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -30,7 +30,7 @@ const Register  = () => {
     
   return (
     <div className={styles.container}>
-      <div className={styles.leftSection}></div>
+      <div className={style.leftSection}></div>
       <div className={styles.rightSection}>
         <div className={styles.topSection}>
         <h3>
@@ -45,49 +45,47 @@ const Register  = () => {
             </Link>
         </h3>
         </div>
-        <div className={styles.formSection}>
+        <div className={style.formSection}>
 
-        
-<h2 class="heading">Welcome </h2>
-<p>Sign up by entering the information below</p>
+            <p>Sign up by entering the information below</p>
 
-<form className={styles.formInput} onSubmit={handleSubmit}>
-    <div class={styles.inputBox}>
-        <input 
-          type="text"
-          placeholder="First Name"
-          name='firstName'
-          onChange={handleChange} />
-    </div>
-    <div class={styles.inputBox}>
-        <input
-          type="text"
-          placeholder="Last Name"
-          name='lastName'
-          onChange={handleChange} />
-    </div>
+            <form className={style.formInput} onSubmit={handleSubmit}>
+                <div class={style.inputBox}>
+                    <input 
+                      type="text"
+                      placeholder="First Name"
+                      name='firstName'
+                      onChange={handleChange} />
+                </div>
+                <div class={style.inputBox}>
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      name='lastName'
+                      onChange={handleChange} />
+                </div>
 
-    <div class={styles.inputBox}>
-        <input
-         type="email"
-         placeholder="Enter your email"
-         name='email'
-         onChange={handleChange} />
-    </div>
-    <div class={styles.inputBox}>
-        <input
-         type="password"
-          placeholder="Enter your password"
-          name='password'
-          onChange={handleChange} />
-    </div>
-    
-    <input type="submit" value="Register" className={styles.btn}/>
-</form>
+                <div class={style.inputBox}>
+                    <input
+                    type="email"
+                    placeholder="Enter your email"
+                    name='email'
+                    onChange={handleChange} />
+                </div>
+                <div class={style.inputBox}>
+                    <input
+                    type="password"
+                      placeholder="Enter your password"
+                      name='password'
+                      onChange={handleChange} />
+                </div>
+                
+                <input type="submit" value="Register" className={styles.btn}/>
+            </form>
 
 
 
-</div>
+        </div>
       </div>
     
     </div>
