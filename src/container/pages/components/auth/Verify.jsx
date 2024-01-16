@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import styles from '../../styles/auth/Verify.module.css'
 
 const Verify = () => {
     const navigate = useNavigate();
@@ -47,8 +48,18 @@ const Verify = () => {
     };
 
     return(
-        <div>
-
+        <div className={styles.container}>
+            <div className={styles.leftSection}></div>
+            <div className={styles.rightSection}>
+                <div className={styles.topSection}>
+                    <h3>
+                        <Link to="/">
+                            <i class='bx bxs-chevron-left'></i>  <span>Return Home</span>
+                        </Link>
+                    </h3>
+                </div>
+                
+            </div>
         </div>
     )
 }
