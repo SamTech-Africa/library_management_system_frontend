@@ -72,7 +72,7 @@ const Verify = () => {
                             length={5}
                             secret
                             onChange={handleTokenChange}
-                            inputMode = "numeric"
+                            inputMode = "alphanumeric"
                         />
                         <input type="submit" value="Continue" className={styles.btn}/>
                     </form>
