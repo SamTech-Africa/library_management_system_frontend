@@ -25,8 +25,14 @@ const Login = () => {
   };
 
   // validate boh email and password using regex pattern
-
+  const isValidEmail = (email) => {
+    return emailRegex.test(email);
+  };
   
+  const isValidPassword = (password) => {
+    return passwordRegex.test(password);
+  };
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
