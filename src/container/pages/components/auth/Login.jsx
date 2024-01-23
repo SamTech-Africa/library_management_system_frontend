@@ -42,7 +42,17 @@ const Login = () => {
     if (email.trim() === ""){
       validateErrors.email = "Please enter email address.";
       setCurrentField("email");
-    }
+    } else if (!isValidEmail(email)){
+      validateErrors.email = "Please enter a valid email address.";
+      setCurrentField("email");
+    } else if (password.length < 6){
+      validateErrors.password = "Password must be at least 6 characters";
+      setCurrentField("password");
+    // } else if (!isValidPassword(password)) {
+    //   validationErrors.password =
+    //     "Password must contain at least one uppercase letter, one lowercase letter,special character, and one digit";
+    //   setCurrentField("password");
+    // }
 
     setError(validateErrors);
 
