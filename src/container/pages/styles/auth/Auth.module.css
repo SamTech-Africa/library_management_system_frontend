@@ -88,3 +88,9 @@
   a {
     color: var(--main-color);
   }
+
+  .error {
+    font-size: 10px;
+    color: red;
+    padding: 0;
+  }

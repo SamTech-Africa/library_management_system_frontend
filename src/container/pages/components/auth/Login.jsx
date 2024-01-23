@@ -9,31 +9,65 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const [currentField, setCurrentField] = useState('');
+  const [error, setError] = useState('');
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
+     setCurrentField("email");
   };
 
   const handleChangePassword = (event) => {
     setPassword(event.target.value);
+     setCurrentField("password");
   };
+
+  // validate boh email and password using regex pattern
+
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const data = {
-      email: email,
-      password: password,
+    const validateErrors = {};
+
+    if (email.trim() === ""){
+      validateErrors.email = "Please enter email address.";
+      setCurrentField("email");
+    }
+
+    setError(validateErrors);
+
+    if(Object.keys(validateErrors).length === 0){
+      const data = {
+        email: email,
+        password: password,
+      };
+
+      try {
+        const response = await axios.post('http://localhost:5252/api/v1/auth/login', data);
+        
+        console.log('Login successfu:', response.data);
+        navigate("/dashboard");
+      } catch (error) {
+        console.error('Error during login', error);
+        setError("Invalid email address or password");
+      };
+
     };
+
+
     
-    try {
-      const response = await axios.post('http://localhost:5252/api/v1/auth/login', data);
-      
-      console.log('Login successfu:', response.data);
-      navigate("/dashboard");
-    } catch (error) {
-      console.error('Error during login', error);
-    };
+   
+
+    setTimeout(()=> {
+      setError({});
+    }, 3000);
+
+    setEmail("");
+    setPassword("");
   }
 
     
@@ -66,6 +100,11 @@ const Login = () => {
                  value={email}
                  onChange={handleEmailChange} />
             </div>
+            {
+              error.email && currentField === "email" && (
+                <p className={styles.error}>{error.email}</p>
+              )
+            }
             <div class={styles.inputBox}>
                 <input
                  type="password"
@@ -73,6 +112,11 @@ const Login = () => {
                  value={password}
                  onChange={handleChangePassword} />
             </div>
+            {
+              error.password && currentField === "password" && (
+                <p className={styles.error}>{error.password}</p>
+              )
+            }
             <div className={style.others}>
               <div className={style.rememberMe}>
                   <input type="checkbox" id="rememberMe" />
