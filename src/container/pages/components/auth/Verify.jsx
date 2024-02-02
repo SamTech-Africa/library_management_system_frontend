@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import PinInput from 'react-pin-input';
@@ -11,44 +11,65 @@ import style from '../../styles/auth/Verify.module.css';
 const Verify = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const 
+    const [verifyPage, setVerifyPage] = useState("");
     const [loading, setLoading] = useState("");
+
+    useEffect (() => {
+        const token = new URLSearchParams(location.search).get('token');
+        if (!token) {
+            setVerifyPage("Invalid token");
+            setLoading(page);
+        }
+
+        axios.post('http://localhost:5252/api/v1/verify', {token})
+            .then(response => {
+                setVerifyPage("Your email is veried");
+            })
+            .catch (error => {
+                setVerifyPage("Invalid token or expired token");
+            })
+            .finally (()=> {
+                setLoading(false);
+            });
+    }, []);
   
     const handleTokenChange = (value) => {
         setToken(value);
     };
 
-    const handleTokenSubmit = async (event) => {
-            event.preventDefault();
+    // const handleTokenSubmit = async (event) => {
+    //         event.preventDefault();
             
-            const data = {
-                email: email,
-                token: token,
-              };
+    //         const data = {
+    //             email: email,
+    //             token: token,
+    //           };
 
-              try {
-                const response = await axios.post('http://localhost:5252/api/v1/auth/verify', data);
+    //           try {
+    //             const response = await axios.post('http://localhost:5252/api/v1/auth/verify', data);
 
-                setShowModal(true);
-                setModalMessage("Your email is verified!");
-                setTimeout(() => {
-                    navigate("/dashboard");
-                }, 2000);
+    //             setShowModal(true);
+    //             setModalMessage("Your email is verified!");
+    //             setTimeout(() => {
+    //                 navigate("/dashboard");
+    //             }, 2000);
 
-                console.log('Login successfu:', response.data);
-              }
-              catch (error) {
-                console.error('Error during login', error);
-                setModalMessage("Incorrect or expired OTP, Pleasetry again.");
-                setShowModal(true);
-              };
+    //             console.log('Login successfu:', response.data);
+    //           }
+    //           catch (error) {
+    //             console.error('Error during login', error);
+    //             setModalMessage("Incorrect or expired OTP, Pleasetry again.");
+    //             setShowModal(true);
+    //           };
 
-              setToken("");
-    };
+    //           setToken("");
+    // };
 
-    const closeModal = () => {
-        setShowModal(false);
-    };
+
+
+    // const closeModal = () => {
+    //     setShowModal(false);
+    // };
 
     return(
         <div className={styles.container}>
@@ -61,20 +82,18 @@ const Verify = () => {
                         </Link>
                     </h3>
                 </div>
-                <div className={style.formSection}>
-                    <p>
-                        Kindly Check your mail to see your OTP number for Account verification
-                    </p>
-                    <form className={style.formInput} onSubmit={handleTokenSubmit}>
-                        <PinInput 
-                            length={5}
-                            secret
-                            onChange={handleTokenChange}
-                            inputMode = "alphanumeric"
-                        />
-                        <input type="submit" value="Continue" className={styles.btn}/>
-                    </form>
+               {loading ? (
+                <p>Loading...</p>
+               ) : (
+                <div>
+                    <h2>{verifyPage}</h2>
+                    {verifyPage === "Your email is verified!" ? (
+                        <Link to="/dashboard">Go to Dashboard</Link>
+                    ) : (
+                        <h3>Email not successful</h3>
+                    )}
                 </div>
+               )}
 
             </div>
         </div>
