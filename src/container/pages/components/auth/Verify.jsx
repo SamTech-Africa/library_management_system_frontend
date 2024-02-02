@@ -11,11 +11,9 @@ import style from '../../styles/auth/Verify.module.css';
 const Verify = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const email = location?.email || "";
-    const [token, setToken] = useState("");
-    const [showModal, setShowModal] = useState("");
-    const [modalMessage, setModalMessage] = useState("");
-
+    const 
+    const [loading, setLoading] = useState("");
+  
     const handleTokenChange = (value) => {
         setToken(value);
     };
