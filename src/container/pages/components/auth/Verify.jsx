@@ -18,7 +18,8 @@ const Verify = () => {
         const token = new URLSearchParams(location.search).get('token');
         if (!token) {
             setVerifyPage("Invalid token");
-            setLoading(page);
+            setLoading(false);
+            return;
         }
 
         axios.post('http://localhost:5252/api/v1/verify', {token})
@@ -33,9 +34,9 @@ const Verify = () => {
             });
     }, []);
   
-    const handleTokenChange = (value) => {
-        setToken(value);
-    };
+    // const handleTokenChange = (value) => {
+    //     setToken(value);
+    // };
 
     // const handleTokenSubmit = async (event) => {
     //         event.preventDefault();
