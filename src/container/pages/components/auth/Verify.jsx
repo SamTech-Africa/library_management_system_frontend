@@ -9,96 +9,64 @@ import style from '../../styles/auth/Verify.module.css';
 
 
 const Verify = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const [verifyPage, setVerifyPage] = useState("");
-    const [loading, setLoading] = useState("");
-
-    useEffect (() => {
-        const token = new URLSearchParams(location.search).get('token');
-        if (!token) {
-            setVerifyPage("Invalid token");
-            setLoading(false);
-            return;
-        }
-
-        axios.post('http://localhost:5252/api/v1/verify', {token})
-            .then(response => {
-                setVerifyPage("Your email is veried");
-            })
-            .catch (error => {
-                setVerifyPage("Invalid token or expired token");
-            })
-            .finally (()=> {
-                setLoading(false);
-            });
-    }, []);
-  
-    // const handleTokenChange = (value) => {
-    //     setToken(value);
-    // };
-
-    // const handleTokenSubmit = async (event) => {
-    //         event.preventDefault();
-            
-    //         const data = {
-    //             email: email,
-    //             token: token,
-    //           };
-
-    //           try {
-    //             const response = await axios.post('http://localhost:5252/api/v1/auth/verify', data);
-
-    //             setShowModal(true);
-    //             setModalMessage("Your email is verified!");
-    //             setTimeout(() => {
-    //                 navigate("/dashboard");
-    //             }, 2000);
-
-    //             console.log('Login successfu:', response.data);
-    //           }
-    //           catch (error) {
-    //             console.error('Error during login', error);
-    //             setModalMessage("Incorrect or expired OTP, Pleasetry again.");
-    //             setShowModal(true);
-    //           };
-
-    //           setToken("");
-    // };
+    const [email, setEmail] = useState('');
 
 
+    
+  return (
+    <div className={styles.container}>
+      <div className={style.leftSection}></div>
+      <div className={styles.rightSection}>
+        <div className={styles.topSection}>
+          <h3>
+            <Link to="/">
+              <i class='bx bxs-chevron-left'></i>  <span>Return Home</span>
+            </Link>
+          </h3>
+          <h3>
+              Not a member yet?{" "}
+              <Link to="/register">
+                <span>Register NOW</span>
+              </Link>
+          </h3>
 
-    // const closeModal = () => {
-    //     setShowModal(false);
-    // };
-
-    return(
-        <div className={styles.container}>
-            <div className={style.leftSection}></div>
-            <div className={styles.rightSection}>
-                <div className={styles.topSection}>
-                    <h3>
-                        <Link to="/">
-                            <i class='bx bxs-chevron-left'></i>  <span>Return Home</span>
-                        </Link>
-                    </h3>
-                </div>
-               {loading ? (
-                <p>Loading...</p>
-               ) : (
-                <div>
-                    <h2>{verifyPage}</h2>
-                    {verifyPage === "Your email is verified!" ? (
-                        <Link to="/dashboard">Go to Dashboard</Link>
-                    ) : (
-                        <h3>Email not successful</h3>
-                    )}
-                </div>
-               )}
-
-            </div>
         </div>
-    )
+
+        <div className={style.content}>
+          <h1>Thanks for signing up!</h1>
+          <p>We've sent an activation email to: </p>
+          <h5>{email}</h5>
+
+          <div className={style.direction}>
+            <div className={style.check}>
+              <i class='bx bxs-chevron-left'></i>
+              <p>Check inbox</p>
+            </div>
+
+            <div className={style.open}>
+              <i class='bx bxs-chevron-left'></i>
+              <p>Open email</p>
+            </div>
+
+            <div className={style.click}>
+              <i class='bx bxs-chevron-left'></i>
+              <p>Click lin in email</p>
+            </div>
+          </div>
+
+          <input type="submit" value="Login" className={styles.btn}/>
+          <div className={styles.footer}>
+            <p>Did not get the email? <Link to={"/"}> <span>We will send it again</span> </Link></p>
+          </div>
+
+        </div>
+       
+      </div>
+    </div>
+   
+    
+   
+  )
 }
 
 export default Verify;
