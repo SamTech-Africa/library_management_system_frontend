@@ -10,6 +10,7 @@ import style from '../../styles/auth/Verify.module.css';
 
 const Verify = () => {
     const [email, setEmail] = useState('');
+    const navigate = useNavigate();
 
 
     

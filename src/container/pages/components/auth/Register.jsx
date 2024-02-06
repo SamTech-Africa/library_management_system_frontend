@@ -1,10 +1,11 @@
 import React,{useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import styles from '../../styles/auth/Auth.module.css';
 import style from '../../styles/auth/register.module.css';
 const Register  = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -37,7 +38,7 @@ const Register  = () => {
         <div className={styles.topSection}>
         <h3>
           <Link to="/">
-            <i class='bx bxs-chevron-left'></i>  <span>Return Home</span>
+            <i class='bx bxs-chevron-left'></i> <span>Return Home</span>
           </Link>
         </h3>
         <h3>
