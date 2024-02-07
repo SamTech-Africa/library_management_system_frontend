@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import PinInput from 'react-pin-input';
+
+import query from 'query-string;
+
 
 import styles from '../../styles/auth/Auth.module.css';
 import style from '../../styles/auth/Verify.module.css';
@@ -11,6 +13,15 @@ import style from '../../styles/auth/Verify.module.css';
 const Verify = () => {
     const [email, setEmail] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+      const queryParams = queryString.parse(location.search)
+
+      if (queryParams.email) {
+        setEmail(queryParams.email;)
+      }
+    })
 
 
     
