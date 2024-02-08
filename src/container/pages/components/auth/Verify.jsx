@@ -7,7 +7,7 @@ import style from '../../styles/auth/Verify.module.css';
 
 const Verify = () => {
     const [email, setEmail] = useState('');
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const location = useLocation();
 
     useEffect(() => {
@@ -40,21 +40,21 @@ const Verify = () => {
         <div className={style.content}>
           <h1>Thanks for signing up!</h1>
           <p>We've sent an activation email to: </p>
-          <h5>{email}</h5>
+          <h3>{email}</h3>
 
           <div className={style.direction}>
             <div className={style.check}>
-              <i class='bx bxs-chevron-left'></i>
+              <i class='bx bxs-envelope'></i>
               <p>Check inbox</p>
             </div>
 
             <div className={style.open}>
-              <i class='bx bxs-chevron-left'></i>
+            <i class='bx bxs-envelope-open'></i>
               <p>Open email</p>
             </div>
 
             <div className={style.click}>
-              <i class='bx bxs-chevron-left'></i>
+              <i class='bx bx-link-external'></i>
               <p>Click lin in email</p>
             </div>
           </div>
