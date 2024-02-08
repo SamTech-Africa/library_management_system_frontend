@@ -43,23 +43,27 @@ const Verify = () => {
           <h3>{email}</h3>
 
           <div className={style.direction}>
-            <div className={style.check}>
+            <div className={style.step}>
               <i class='bx bxs-envelope'></i>
               <p>Check inbox</p>
             </div>
+            
+            <div className={style.line}></div>
 
-            <div className={style.open}>
-            <i class='bx bxs-envelope-open'></i>
+            <div className={style.step}>
+              <i class='bx bxs-envelope-open'></i>
               <p>Open email</p>
             </div>
+            <div className={style.line}></div>
 
-            <div className={style.click}>
+            <div className={style.step}>
               <i class='bx bx-link-external'></i>
               <p>Click lin in email</p>
             </div>
           </div>
 
-        <a href="https://mail.google.com/"> <input type="submit" value=" Login to Gmail" className={styles.btn} /></a>
+          <a href="https://mail.google.com/"> <input type="submit" value=" Login to Gmail" className={styles.btn} /></a>
+
           <div className={styles.footer}>
             <p>Did not get the email? <Link to={"/"}> <span>We will send it again</span> </Link></p>
           </div>
