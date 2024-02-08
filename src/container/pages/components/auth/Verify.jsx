@@ -36,10 +36,10 @@ const Verify = () => {
             </Link>
           </h3>
           <h3>
-              Not a member yet?{" "}
-              <Link to="/register">
-                <span>Register NOW</span>
-              </Link>
+            Already a member?{" "}
+            <Link to="/login">
+              <span> Login Now!</span>
+            </Link>
           </h3>
 
         </div>
