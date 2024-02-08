@@ -16,8 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50rem; 
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 
@@ -28,21 +27,8 @@
     text-align: center;
 }
 
-.formSection form {
-    max-width: 90rem;
-    margin: 1rem auto;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-.formSection form .formIput input {
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    color: #1c1464;
-    font-size: 40px;
-    margin: 0 15px 25px;
-    border: 2px solid #0f0c29;
-    border-radius: 10px;
+ .content .direction {
+    display: flex;
+    flex-direction: column;
 }
 

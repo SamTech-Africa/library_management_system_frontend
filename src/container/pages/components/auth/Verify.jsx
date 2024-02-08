@@ -59,7 +59,7 @@ const Verify = () => {
             </div>
           </div>
 
-        <a href="https://mail.google.com/" className={styles.btn}>Login to Gmail</a>
+        <a href="https://mail.google.com/"> <input type="submit" value=" Login to Gmail" className={styles.btn} /></a>
           <div className={styles.footer}>
             <p>Did not get the email? <Link to={"/"}> <span>We will send it again</span> </Link></p>
           </div>
