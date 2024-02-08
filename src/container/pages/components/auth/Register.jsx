@@ -23,7 +23,7 @@ const Register  = () => {
     try {
       const response = await axios.post('http://localhost:5252/api/v1/auth/library-user/register', formData);
       console.log(response.data);
-      navigate("/verify");
+      navigate("/verify", {state: {email: formData.email}});
       
     } catch (error) {
       console.error('Error registering:', error);

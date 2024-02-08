@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
-import queryString from 'query-string';
-
-
 import styles from '../../styles/auth/Auth.module.css';
 import style from '../../styles/auth/Verify.module.css';
 
@@ -16,12 +11,10 @@ const Verify = () => {
     const location = useLocation();
 
     useEffect(() => {
-      const queryParams = queryString.parse(location.search)
-
-      if (queryParams.email) {
-        setEmail(queryParams.email);
-      }
-    }, [location.search])
+     if(location.state && location.state.email) {
+        setEmail(location.state.email);
+     }
+    }, [location.state])
 
 
     
