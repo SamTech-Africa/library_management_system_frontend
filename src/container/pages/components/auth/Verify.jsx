@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-import query from 'query-string;
+import queryString from 'query-string';
 
 
 import styles from '../../styles/auth/Auth.module.css';
@@ -19,9 +19,9 @@ const Verify = () => {
       const queryParams = queryString.parse(location.search)
 
       if (queryParams.email) {
-        setEmail(queryParams.email;)
+        setEmail(queryParams.email);
       }
-    })
+    }, [location.search])
 
 
     
