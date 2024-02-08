@@ -5,6 +5,7 @@ import Login from './container/pages/components/auth/Login';
 import Register from './container/pages/components/auth/Register';
 import Dashboard from './container/pages/components/dashboard/Dashboard';
 import Verify from './container/pages/components/auth/Verify';
+import Verified from './container/pages/components/auth/Verified';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/verify" element={<Verify />} />
+        <Route path="/verified" element={<Verified />} />
         
       </Routes>
     </Router>
