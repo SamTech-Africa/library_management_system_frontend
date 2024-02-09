@@ -31,6 +31,18 @@ const Verified = () => {
         setVerificationStatus('Failed to verify account')
       }
     }
+
+
+    useEffect(() => {
+      if (verificationStatus === 'Account verified successfully') {
+        // Redirect to dashboard
+        const timeout = setTimeout(( => {
+          history.push('/dashboard');
+        }, 3000))
+
+        return () => clearTimeout(timeout);
+      }  
+    }, [verificationStatus, history])
      
 
 
@@ -42,12 +54,8 @@ const Verified = () => {
        
 
         <div className={style.content}>
-          <h1>Thanks for signing up!</h1>
-          <p>We've sent an activation email to: </p>
-          <h3>{email}</h3>
-
-        
-
+          <h1>Thanks for joining SamTech Library Managment System!</h1>
+          <p>{verificationStatus}</p>
         </div>
        
       </div>
