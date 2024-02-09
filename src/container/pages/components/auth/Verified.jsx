@@ -1,20 +1,37 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import styles from '../../styles/auth/Auth.module.css';
 import style from '../../styles/auth/Verify.module.css';
+import axios from 'axios';
 
 
 
 const Verified = () => {
-    const [email, setEmail] = useState('');
-    // const navigate = useNavigate();
+    const [verificationStatus,setVerificationStatus] = useState('');
     const location = useLocation();
+    const history = useHistory();
 
-    useEffect(() => {
-     if(location.state && location.state.email) {
-        setEmail(location.state.email);
-     }
-    }, [location.state])
+    useEffect(() => { 
+      const queryParams = new URLSearchParams(location.search);
+      const userEmail = queryParams.get('email');
+      const verificationToken = queryParams.get('token');
+
+      if (userEmail && verificationToken) {
+        verifyAccount(userEmail, verificationToken);
+      } else {
+        setVerificationStatus("Invalid verification link");
+      }
+    }, [location.search]);
+
+    const verifyAccount = async (email, token) => {
+      try {
+        await axios.get(`http://localhost:5252/api/v1/auth/verify?email=${email}&tokn=${token}`);
+        setVerificationStatus("Account verified successfully");
+      } catch (error) {
+        setVerificationStatus('Failed to verify account')
+      }
+    }
+     
 
 
     
@@ -29,10 +46,7 @@ const Verified = () => {
           <p>We've sent an activation email to: </p>
           <h3>{email}</h3>
 
-          <div className={style.direction}>
-            
-            
-          </div>
+        
 
         </div>
        
