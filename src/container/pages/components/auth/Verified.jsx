@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { Link, useLocation, useHistory} from 'react-router-dom';
 import styles from '../../styles/auth/Auth.module.css';
 import style from '../../styles/auth/Verify.module.css';
 import axios from 'axios';
@@ -9,7 +9,7 @@ import axios from 'axios';
 const Verified = () => {
     const [verificationStatus,setVerificationStatus] = useState('');
     const location = useLocation();
-    const history = useHistory();
+    const history = useHistory()
 
     useEffect(() => { 
       const queryParams = new URLSearchParams(location.search);
@@ -36,9 +36,9 @@ const Verified = () => {
     useEffect(() => {
       if (verificationStatus === 'Account verified successfully') {
         // Redirect to dashboard
-        const timeout = setTimeout(( => {
+        const timeout = setTimeout(() => {
           history.push('/dashboard');
-        }, 3000))
+        }, 3000)
 
         return () => clearTimeout(timeout);
       }  
